@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */; };
-		D55B361E29DF7FBA005AD9B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B361D29DF7FBA005AD9B4 /* ContentView.swift */; };
 		D55B362029DF7FBB005AD9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */; };
-		D55B362429DF7FBB005AD9B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B362329DF7FBB005AD9B4 /* Preview Assets.xcassets */; };
+		D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B362E29DF80C6005AD9B4 /* ChessClient.swift */; };
+		D55B363229DF819F005AD9B4 /* Environment+ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B363129DF819F005AD9B4 /* Environment+ChessClient.swift */; };
+		D57356FA29DF8263005225D6 /* ChessHeatmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57356F929DF8263005225D6 /* ChessHeatmapTests.swift */; };
+		D573570929DF87D9005225D6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570829DF87D9005225D6 /* Game.swift */; };
+		D573570C29DF89B6005225D6 /* ChessClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570B29DF89B6005225D6 /* ChessClientTests.swift */; };
+		D573570F29DF8C4C005225D6 /* YearResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570E29DF8C4C005225D6 /* YearResultView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D57356FB29DF8263005225D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55B361029DF7FBA005AD9B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55B361729DF7FBA005AD9B4;
+			remoteInfo = ChessHeatmap;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessHeatmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessHeatmapApp.swift; sourceTree = "<group>"; };
-		D55B361D29DF7FBA005AD9B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55B362129DF7FBB005AD9B4 /* ChessHeatmap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChessHeatmap.entitlements; sourceTree = "<group>"; };
-		D55B362329DF7FBB005AD9B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D55B362E29DF80C6005AD9B4 /* ChessClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClient.swift; sourceTree = "<group>"; };
+		D55B363129DF819F005AD9B4 /* Environment+ChessClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ChessClient.swift"; sourceTree = "<group>"; };
+		D57356F729DF8263005225D6 /* ChessHeatmapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessHeatmapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57356F929DF8263005225D6 /* ChessHeatmapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessHeatmapTests.swift; sourceTree = "<group>"; };
+		D573570829DF87D9005225D6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D573570B29DF89B6005225D6 /* ChessClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClientTests.swift; sourceTree = "<group>"; };
+		D573570E29DF8C4C005225D6 /* YearResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D55B361529DF7FBA005AD9B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57356F429DF8263005225D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				D55B361A29DF7FBA005AD9B4 /* ChessHeatmap */,
+				D57356F829DF8263005225D6 /* ChessHeatmapTests */,
 				D55B361929DF7FBA005AD9B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */,
+				D57356F729DF8263005225D6 /* ChessHeatmapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,21 +80,88 @@
 		D55B361A29DF7FBA005AD9B4 /* ChessHeatmap */ = {
 			isa = PBXGroup;
 			children = (
+				D573570729DF87CF005225D6 /* domain */,
+				D55B363029DF818A005AD9B4 /* environment */,
+				D55B362D29DF80BB005AD9B4 /* services */,
+				D55B362C29DF8099005AD9B4 /* components */,
+				D55B362B29DF8095005AD9B4 /* resources */,
+				D55B362A29DF8090005AD9B4 /* modules */,
 				D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */,
-				D55B361D29DF7FBA005AD9B4 /* ContentView.swift */,
-				D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */,
-				D55B362129DF7FBB005AD9B4 /* ChessHeatmap.entitlements */,
-				D55B362229DF7FBB005AD9B4 /* Preview Content */,
 			);
 			path = ChessHeatmap;
 			sourceTree = "<group>";
 		};
-		D55B362229DF7FBB005AD9B4 /* Preview Content */ = {
+		D55B362A29DF8090005AD9B4 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				D55B362329DF7FBB005AD9B4 /* Preview Assets.xcassets */,
+				D573570D29DF8C30005225D6 /* YearResult */,
 			);
-			path = "Preview Content";
+			path = modules;
+			sourceTree = "<group>";
+		};
+		D55B362B29DF8095005AD9B4 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				D55B362129DF7FBB005AD9B4 /* ChessHeatmap.entitlements */,
+				D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		D55B362C29DF8099005AD9B4 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D55B362D29DF80BB005AD9B4 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				D55B362E29DF80C6005AD9B4 /* ChessClient.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		D55B363029DF818A005AD9B4 /* environment */ = {
+			isa = PBXGroup;
+			children = (
+				D55B363129DF819F005AD9B4 /* Environment+ChessClient.swift */,
+			);
+			path = environment;
+			sourceTree = "<group>";
+		};
+		D57356F829DF8263005225D6 /* ChessHeatmapTests */ = {
+			isa = PBXGroup;
+			children = (
+				D573570A29DF89A8005225D6 /* services */,
+				D57356F929DF8263005225D6 /* ChessHeatmapTests.swift */,
+			);
+			path = ChessHeatmapTests;
+			sourceTree = "<group>";
+		};
+		D573570729DF87CF005225D6 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				D573570829DF87D9005225D6 /* Game.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		D573570A29DF89A8005225D6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				D573570B29DF89B6005225D6 /* ChessClientTests.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		D573570D29DF8C30005225D6 /* YearResult */ = {
+			isa = PBXGroup;
+			children = (
+				D573570E29DF8C4C005225D6 /* YearResultView.swift */,
+			);
+			path = YearResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +184,24 @@
 			productReference = D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D57356F629DF8263005225D6 /* ChessHeatmapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57356FD29DF8263005225D6 /* Build configuration list for PBXNativeTarget "ChessHeatmapTests" */;
+			buildPhases = (
+				D57356F329DF8263005225D6 /* Sources */,
+				D57356F429DF8263005225D6 /* Frameworks */,
+				D57356F529DF8263005225D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D57356FC29DF8263005225D6 /* PBXTargetDependency */,
+			);
+			name = ChessHeatmapTests;
+			productName = ChessHeatmapTests;
+			productReference = D57356F729DF8263005225D6 /* ChessHeatmapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +214,10 @@
 				TargetAttributes = {
 					D55B361729DF7FBA005AD9B4 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					D57356F629DF8263005225D6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D55B361729DF7FBA005AD9B4;
 					};
 				};
 			};
@@ -118,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				D55B361729DF7FBA005AD9B4 /* ChessHeatmap */,
+				D57356F629DF8263005225D6 /* ChessHeatmapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,8 +245,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D55B362429DF7FBB005AD9B4 /* Preview Assets.xcassets in Resources */,
 				D55B362029DF7FBB005AD9B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57356F529DF8263005225D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,12 +263,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D55B361E29DF7FBA005AD9B4 /* ContentView.swift in Sources */,
+				D55B363229DF819F005AD9B4 /* Environment+ChessClient.swift in Sources */,
+				D573570F29DF8C4C005225D6 /* YearResultView.swift in Sources */,
+				D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */,
 				D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */,
+				D573570929DF87D9005225D6 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57356F329DF8263005225D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57356FA29DF8263005225D6 /* ChessHeatmapTests.swift in Sources */,
+				D573570C29DF89B6005225D6 /* ChessClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D57356FC29DF8263005225D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55B361729DF7FBA005AD9B4 /* ChessHeatmap */;
+			targetProxy = D57356FB29DF8263005225D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D55B362529DF7FBB005AD9B4 /* Debug */ = {
@@ -261,10 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ChessHeatmap/ChessHeatmap.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ChessHeatmap/Resources/ChessHeatmap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChessHeatmap/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Z88RVG5KD9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -299,10 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ChessHeatmap/ChessHeatmap.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ChessHeatmap/Resources/ChessHeatmap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChessHeatmap/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Z88RVG5KD9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -332,6 +476,50 @@
 			};
 			name = Release;
 		};
+		D57356FE29DF8263005225D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z88RVG5KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.boek.ChessHeatmapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChessHeatmap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChessHeatmap";
+			};
+			name = Debug;
+		};
+		D57356FF29DF8263005225D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z88RVG5KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.boek.ChessHeatmapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChessHeatmap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChessHeatmap";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,6 +537,15 @@
 			buildConfigurations = (
 				D55B362829DF7FBB005AD9B4 /* Debug */,
 				D55B362929DF7FBB005AD9B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57356FD29DF8263005225D6 /* Build configuration list for PBXNativeTarget "ChessHeatmapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57356FE29DF8263005225D6 /* Debug */,
+				D57356FF29DF8263005225D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

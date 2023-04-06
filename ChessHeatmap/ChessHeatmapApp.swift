@@ -11,7 +11,8 @@ import SwiftUI
 struct ChessHeatmapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            YearResultView()
+                .with(chessClient: .live)
         }
     }
 }
