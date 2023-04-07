@@ -10,14 +10,15 @@ import SwiftUI
 struct YearResultView: View {
     @Environment(\.chessClient) var chessClient
     @State var username: String = ""
-    @State var year: Int = Calendar.current.component(.year, from: Date())
     @State var results: OrderedGames?
     @State var searching = false
     @State var message: String? = nil
-    
-    var availableYears: [Int] {
+    @State private var availableYears: [Int] = []
+    @State private var year: Int = Calendar.current.component(.year, from: Date())
+
+    private func setupAvailableYears() {
         let currentYear = Calendar.current.component(.year, from: Date())
-        return Array(2007...currentYear)
+        availableYears = Array(2007...currentYear)
     }
 
     var body: some View {
@@ -46,7 +47,7 @@ struct YearResultView: View {
                     HeatmapView(orderedGames: results)
                 }
             }
-        }
+        }.onAppear(perform: setupAvailableYears)
         .task(id: results) {
             guard let results else { return }
             var (wins, losses, ties) = results.gameList.reduce((0, 0, 0)) { results, game in
