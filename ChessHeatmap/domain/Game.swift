@@ -8,40 +8,17 @@
 import Foundation
 
 struct Game: Identifiable, Equatable, Codable {
-    var id: String { uuid }
-    var uuid: String = UUID().uuidString
+    var id: UUID { uuid }
+    var uuid: UUID = UUID()
     var endTime: Date
-    var white: Player
-    var black: Player
-}
+    var white: GamePlayer
+    var black: GamePlayer
 
-extension Game {
-    static var exampleA: Game {
-        .init(
-            endTime: Calendar.current.date(byAdding: .day, value: 1, to: .distantPast)!,
-            white: .exampleA,
-            black: .exampleB
-        )
-    }
-
-    static var exampleB: Game {
-        .init(
-            endTime: Calendar.current.date(byAdding: .day, value: 2, to: .distantPast)!,
-            white: .exampleB,
-            black: .exampleA
-        )
-    }
-
-    static func seedExamples(amount: Int) -> [Game] {
-        let games = Array(repeating: 0, count: amount)
-        let randomNumbers = games.map { _ in arc4random() % 31 }
-        return randomNumbers
-            .map { amount in
-                Game(
-                    endTime: Calendar.current.date(byAdding: .day, value: Int(amount), to: .distantPast)!,
-                    white: amount % 2 == 0 ? .exampleA : .exampleB,
-                    black: amount % 2 == 0 ? .exampleB : .exampleA
-                )
-            }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.uuid = UUID(uuidString: try container.decode(String.self, forKey: .uuid))!
+        self.endTime = try container.decode(Date.self, forKey: .endTime)
+        self.white = try container.decode(GamePlayer.self, forKey: .white)
+        self.black = try container.decode(GamePlayer.self, forKey: .black)
     }
 }

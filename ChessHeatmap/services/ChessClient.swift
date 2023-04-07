@@ -47,6 +47,7 @@ struct FetchGamesOptions {
 
 struct ChessClient {
     var fetchGames: (FetchGamesOptions) async throws -> [Game]
+    var fetchPlayer: (String) async throws -> Player
 }
 
 struct GamesResult: Codable {
@@ -56,7 +57,8 @@ struct GamesResult: Codable {
 extension ChessClient {
     static var test: Self {
         .init(
-            fetchGames: { _ in [] }
+            fetchGames: { _ in [] },
+            fetchPlayer: { _ in .test }
         )
     }
 
@@ -65,14 +67,20 @@ extension ChessClient {
             fetchGames: { options in
                 guard let request = URL(string: "https://api.chess.com/pub/player/\(options.user)/games/\(options.year)/\(String(format: "%02d", options.month.rawValue))")
                     .map({ URLRequest(url: $0) }) else { fatalError() }
-                print(request)
                 let (data, _) = try await URLSession.shared.data(for: request)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 decoder.dateDecodingStrategy = .secondsSince1970
+                print(data)
                 let result = try decoder.decode(GamesResult.self, from: data)
-                print("-------", result)
                 return result.games
+            },
+            fetchPlayer: { player in
+                guard let request = URL(string: "https://api.chess.com/pub/player/\(player)/")
+                    .map({ URLRequest(url: $0) }) else { fatalError() }
+                let (data, _) = try await URLSession.shared.data(for: request)
+                let decoder = JSONDecoder()
+                return try decoder.decode(Player.self, from: data)
             }
         )
     }

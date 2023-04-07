@@ -22,12 +22,15 @@
 		D573571A29DFC4FF005225D6 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = D573571929DFC4FF005225D6 /* SQLite */; };
 		D573571D29DFC5A8005225D6 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571C29DFC5A8005225D6 /* UserListView.swift */; };
 		D573571F29DFC5BD005225D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571E29DFC5BD005225D6 /* User.swift */; };
-		D573572129DFC79E005225D6 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572029DFC79E005225D6 /* DatabaseClient.swift */; };
+		D573572129DFC79E005225D6 /* PlayerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572029DFC79E005225D6 /* PlayerClient.swift */; };
 		D573572729DFCC93005225D6 /* SQLiteMigrationManager in Frameworks */ = {isa = PBXBuildFile; productRef = D573572629DFCC93005225D6 /* SQLiteMigrationManager */; };
 		D573572B29DFCD0E005225D6 /* AddInitialTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572A29DFCD0E005225D6 /* AddInitialTables.swift */; };
 		D573572D29DFCD8E005225D6 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572C29DFCD8E005225D6 /* Schema.swift */; };
 		D573573029DFD131005225D6 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572F29DFD131005225D6 /* Migrations.swift */; };
 		D573573329DFD1DD005225D6 /* MigrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573573229DFD1DD005225D6 /* MigrationsTests.swift */; };
+		D573573529DFD2E2005225D6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573573429DFD2E2005225D6 /* Database.swift */; };
+		D573573729DFD377005225D6 /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573573629DFD377005225D6 /* GamePlayer.swift */; };
+		D573573929DFDB5A005225D6 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573573829DFDB5A005225D6 /* Id.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +61,14 @@
 		D573571629DF9877005225D6 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		D573571C29DFC5A8005225D6 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		D573571E29DFC5BD005225D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D573572029DFC79E005225D6 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
+		D573572029DFC79E005225D6 /* PlayerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerClient.swift; sourceTree = "<group>"; };
 		D573572A29DFCD0E005225D6 /* AddInitialTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInitialTables.swift; sourceTree = "<group>"; };
 		D573572C29DFCD8E005225D6 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		D573572F29DFD131005225D6 /* Migrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrations.swift; sourceTree = "<group>"; };
 		D573573229DFD1DD005225D6 /* MigrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationsTests.swift; sourceTree = "<group>"; };
+		D573573429DFD2E2005225D6 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D573573629DFD377005225D6 /* GamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayer.swift; sourceTree = "<group>"; };
+		D573573829DFDB5A005225D6 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D55B362E29DF80C6005AD9B4 /* ChessClient.swift */,
-				D573572029DFC79E005225D6 /* DatabaseClient.swift */,
+				D573572029DFC79E005225D6 /* PlayerClient.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				D573571429DF9855005225D6 /* Player.swift */,
 				D573571629DF9877005225D6 /* GameResult.swift */,
 				D573571E29DFC5BD005225D6 /* User.swift */,
+				D573573629DFD377005225D6 /* GamePlayer.swift */,
+				D573573829DFDB5A005225D6 /* Id.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				D573572929DFCCF8005225D6 /* migrations */,
 				D573572C29DFCD8E005225D6 /* Schema.swift */,
 				D573572F29DFD131005225D6 /* Migrations.swift */,
+				D573573429DFD2E2005225D6 /* Database.swift */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -342,18 +351,21 @@
 			files = (
 				D55B363229DF819F005AD9B4 /* Environment+ChessClient.swift in Sources */,
 				D573571D29DFC5A8005225D6 /* UserListView.swift in Sources */,
+				D573573929DFDB5A005225D6 /* Id.swift in Sources */,
 				D573570F29DF8C4C005225D6 /* YearResultView.swift in Sources */,
 				D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */,
 				D573572B29DFCD0E005225D6 /* AddInitialTables.swift in Sources */,
 				D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */,
+				D573573729DFD377005225D6 /* GamePlayer.swift in Sources */,
 				D573571529DF9855005225D6 /* Player.swift in Sources */,
-				D573572129DFC79E005225D6 /* DatabaseClient.swift in Sources */,
+				D573572129DFC79E005225D6 /* PlayerClient.swift in Sources */,
 				D573573029DFD131005225D6 /* Migrations.swift in Sources */,
 				D573570929DF87D9005225D6 /* Game.swift in Sources */,
 				D573571129DF9712005225D6 /* HeatmapView.swift in Sources */,
 				D573571329DF9767005225D6 /* OrderedGames.swift in Sources */,
 				D573571729DF9877005225D6 /* GameResult.swift in Sources */,
 				D573572D29DFCD8E005225D6 /* Schema.swift in Sources */,
+				D573573529DFD2E2005225D6 /* Database.swift in Sources */,
 				D573571F29DFC5BD005225D6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

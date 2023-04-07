@@ -51,9 +51,8 @@ struct HeatmapView: View {
 }
 
 struct HeatmapView_Previews: PreviewProvider {
-    static var examples: OrderedGames = OrderedGames(games: Game.seedExamples(amount: 400))
-
     static var previews: some View {
-        HeatmapView(orderedGames: examples)
+        Text("test")
+//        HeatmapView(orderedGames: examples)
     }
 }
