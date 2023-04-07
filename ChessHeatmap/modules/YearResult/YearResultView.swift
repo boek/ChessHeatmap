@@ -11,18 +11,12 @@ struct YearResultView: View {
     @Environment(\.chessClient) var chessClient
     @State var username: String = ""
     @State var year: Int = 2023
-    @State var month: Month = .april
-    @State var results: [Game]?
+    @State var results: OrderedGames?
     @State var searching = false
+    @State var message: String? = nil
 
     var body: some View {
-        List {
-            if let results {
-                ForEach(results, id: \.endTime) { game in
-                    Text("\(game.white.username) vs \(game.black.username)")
-                }
-            }
-        }.safeAreaInset(edge: .top) {
+        VStack {
             VStack {
                 TextField("username", text: $username)
                     .textInputAutocapitalization(.never)
@@ -34,27 +28,50 @@ struct YearResultView: View {
                     }
                 }
 
-                Picker("Month", selection: $month) {
-                    ForEach(Month.allCases, id: \.self) { month in
-                        Text(month.display)
-                            .tag(month)
-                    }
-                }
-
                 Button("Find") {
                     searching = true
                 }
+
+                if let message {
+                    Text(message)
+                }
             }
+            Divider()
+            ScrollView {
+                if let results {
+                    HeatmapView(orderedGames: results)
+                }
+            }
+        }
+        .task(id: results) {
+            guard let results else { return }
+            var (wins, losses, ties) = results.gameList.reduce((0, 0, 0)) { results, game in
+                var (wins, losses, ties) = results
+                let result = game.white.username == username ? game.white.result : game.black.result
+                switch result.simplified {
+                case .win: wins += 1
+                case .tie: ties += 1
+                case .loss: losses += 1
+                }
+
+                return (wins, losses, ties)
+            }
+
+            message = "\(username) has \(wins) wins, \(losses) losses and \(ties) draws"
         }
         .task(id: searching) {
             guard searching else { return }
-            do {
-                var results = try await chessClient.fetchGames(.init(user: username, year: year, month: month))
-                self.results = results
-            } catch {
-                print("something went wrong", error)
+            defer { searching = false }
+            var results: [Game] = []
+            for month in Month.allCases {
+
+                print("finding games in month: \(month)")
+                do {
+                    results.append(contentsOf: try await chessClient.fetchGames(.init(user: username, year: year, month: month)))
+                } catch { print("something went wrong", error) }
             }
 
+            self.results = OrderedGames(games: results)
         }
     }
 }

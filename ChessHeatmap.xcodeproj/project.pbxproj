@@ -15,6 +15,19 @@
 		D573570929DF87D9005225D6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570829DF87D9005225D6 /* Game.swift */; };
 		D573570C29DF89B6005225D6 /* ChessClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570B29DF89B6005225D6 /* ChessClientTests.swift */; };
 		D573570F29DF8C4C005225D6 /* YearResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573570E29DF8C4C005225D6 /* YearResultView.swift */; };
+		D573571129DF9712005225D6 /* HeatmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571029DF9712005225D6 /* HeatmapView.swift */; };
+		D573571329DF9767005225D6 /* OrderedGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571229DF9767005225D6 /* OrderedGames.swift */; };
+		D573571529DF9855005225D6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571429DF9855005225D6 /* Player.swift */; };
+		D573571729DF9877005225D6 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571629DF9877005225D6 /* GameResult.swift */; };
+		D573571A29DFC4FF005225D6 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = D573571929DFC4FF005225D6 /* SQLite */; };
+		D573571D29DFC5A8005225D6 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571C29DFC5A8005225D6 /* UserListView.swift */; };
+		D573571F29DFC5BD005225D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573571E29DFC5BD005225D6 /* User.swift */; };
+		D573572129DFC79E005225D6 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572029DFC79E005225D6 /* DatabaseClient.swift */; };
+		D573572729DFCC93005225D6 /* SQLiteMigrationManager in Frameworks */ = {isa = PBXBuildFile; productRef = D573572629DFCC93005225D6 /* SQLiteMigrationManager */; };
+		D573572B29DFCD0E005225D6 /* AddInitialTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572A29DFCD0E005225D6 /* AddInitialTables.swift */; };
+		D573572D29DFCD8E005225D6 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572C29DFCD8E005225D6 /* Schema.swift */; };
+		D573573029DFD131005225D6 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573572F29DFD131005225D6 /* Migrations.swift */; };
+		D573573329DFD1DD005225D6 /* MigrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573573229DFD1DD005225D6 /* MigrationsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +52,17 @@
 		D573570829DF87D9005225D6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D573570B29DF89B6005225D6 /* ChessClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClientTests.swift; sourceTree = "<group>"; };
 		D573570E29DF8C4C005225D6 /* YearResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearResultView.swift; sourceTree = "<group>"; };
+		D573571029DF9712005225D6 /* HeatmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapView.swift; sourceTree = "<group>"; };
+		D573571229DF9767005225D6 /* OrderedGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedGames.swift; sourceTree = "<group>"; };
+		D573571429DF9855005225D6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D573571629DF9877005225D6 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
+		D573571C29DFC5A8005225D6 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		D573571E29DFC5BD005225D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D573572029DFC79E005225D6 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
+		D573572A29DFCD0E005225D6 /* AddInitialTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInitialTables.swift; sourceTree = "<group>"; };
+		D573572C29DFCD8E005225D6 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		D573572F29DFD131005225D6 /* Migrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrations.swift; sourceTree = "<group>"; };
+		D573573229DFD1DD005225D6 /* MigrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D573571A29DFC4FF005225D6 /* SQLite in Frameworks */,
+				D573572729DFCC93005225D6 /* SQLiteMigrationManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +106,7 @@
 		D55B361A29DF7FBA005AD9B4 /* ChessHeatmap */ = {
 			isa = PBXGroup;
 			children = (
+				D573572829DFCCF1005225D6 /* database */,
 				D573570729DF87CF005225D6 /* domain */,
 				D55B363029DF818A005AD9B4 /* environment */,
 				D55B362D29DF80BB005AD9B4 /* services */,
@@ -94,6 +121,7 @@
 		D55B362A29DF8090005AD9B4 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				D573571B29DFC59C005225D6 /* UserList */,
 				D573570D29DF8C30005225D6 /* YearResult */,
 			);
 			path = modules;
@@ -111,6 +139,7 @@
 		D55B362C29DF8099005AD9B4 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				D573571029DF9712005225D6 /* HeatmapView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -119,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D55B362E29DF80C6005AD9B4 /* ChessClient.swift */,
+				D573572029DFC79E005225D6 /* DatabaseClient.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -134,6 +164,7 @@
 		D57356F829DF8263005225D6 /* ChessHeatmapTests */ = {
 			isa = PBXGroup;
 			children = (
+				D573573129DFD1D2005225D6 /* database */,
 				D573570A29DF89A8005225D6 /* services */,
 				D57356F929DF8263005225D6 /* ChessHeatmapTests.swift */,
 			);
@@ -144,6 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				D573570829DF87D9005225D6 /* Game.swift */,
+				D573571229DF9767005225D6 /* OrderedGames.swift */,
+				D573571429DF9855005225D6 /* Player.swift */,
+				D573571629DF9877005225D6 /* GameResult.swift */,
+				D573571E29DFC5BD005225D6 /* User.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -164,6 +199,40 @@
 			path = YearResult;
 			sourceTree = "<group>";
 		};
+		D573571B29DFC59C005225D6 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				D573571C29DFC5A8005225D6 /* UserListView.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		D573572829DFCCF1005225D6 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				D573572929DFCCF8005225D6 /* migrations */,
+				D573572C29DFCD8E005225D6 /* Schema.swift */,
+				D573572F29DFD131005225D6 /* Migrations.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		D573572929DFCCF8005225D6 /* migrations */ = {
+			isa = PBXGroup;
+			children = (
+				D573572A29DFCD0E005225D6 /* AddInitialTables.swift */,
+			);
+			path = migrations;
+			sourceTree = "<group>";
+		};
+		D573573129DFD1D2005225D6 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				D573573229DFD1DD005225D6 /* MigrationsTests.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +249,10 @@
 			dependencies = (
 			);
 			name = ChessHeatmap;
+			packageProductDependencies = (
+				D573571929DFC4FF005225D6 /* SQLite */,
+				D573572629DFCC93005225D6 /* SQLiteMigrationManager */,
+			);
 			productName = ChessHeatmap;
 			productReference = D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +303,10 @@
 				Base,
 			);
 			mainGroup = D55B360F29DF7FBA005AD9B4;
+			packageReferences = (
+				D573571829DFC4FF005225D6 /* XCRemoteSwiftPackageReference "SQLite" */,
+				D573572529DFCC93005225D6 /* XCRemoteSwiftPackageReference "SQLiteMigrationManager" */,
+			);
 			productRefGroup = D55B361929DF7FBA005AD9B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,10 +341,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55B363229DF819F005AD9B4 /* Environment+ChessClient.swift in Sources */,
+				D573571D29DFC5A8005225D6 /* UserListView.swift in Sources */,
 				D573570F29DF8C4C005225D6 /* YearResultView.swift in Sources */,
 				D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */,
+				D573572B29DFCD0E005225D6 /* AddInitialTables.swift in Sources */,
 				D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */,
+				D573571529DF9855005225D6 /* Player.swift in Sources */,
+				D573572129DFC79E005225D6 /* DatabaseClient.swift in Sources */,
+				D573573029DFD131005225D6 /* Migrations.swift in Sources */,
 				D573570929DF87D9005225D6 /* Game.swift in Sources */,
+				D573571129DF9712005225D6 /* HeatmapView.swift in Sources */,
+				D573571329DF9767005225D6 /* OrderedGames.swift in Sources */,
+				D573571729DF9877005225D6 /* GameResult.swift in Sources */,
+				D573572D29DFCD8E005225D6 /* Schema.swift in Sources */,
+				D573571F29DFC5BD005225D6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D573573329DFD1DD005225D6 /* MigrationsTests.swift in Sources */,
 				D57356FA29DF8263005225D6 /* ChessHeatmapTests.swift in Sources */,
 				D573570C29DF89B6005225D6 /* ChessClientTests.swift in Sources */,
 			);
@@ -551,6 +639,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D573571829DFC4FF005225D6 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		D573572529DFCC93005225D6 /* XCRemoteSwiftPackageReference "SQLiteMigrationManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/garriguv/SQLiteMigrationManager.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D573571929DFC4FF005225D6 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D573571829DFC4FF005225D6 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		D573572629DFCC93005225D6 /* SQLiteMigrationManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D573572529DFCC93005225D6 /* XCRemoteSwiftPackageReference "SQLiteMigrationManager" */;
+			productName = SQLiteMigrationManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D55B361029DF7FBA005AD9B4 /* Project object */;
 }
