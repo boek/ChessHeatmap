@@ -10,10 +10,15 @@ import SwiftUI
 struct YearResultView: View {
     @Environment(\.chessClient) var chessClient
     @State var username: String = ""
-    @State var year: Int = 2023
+    @State var year: Int = Calendar.current.component(.year, from: Date())
     @State var results: OrderedGames?
     @State var searching = false
     @State var message: String? = nil
+    
+    var availableYears: [Int] {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        return Array(2007...currentYear)
+    }
 
     var body: some View {
         VStack {
@@ -22,12 +27,11 @@ struct YearResultView: View {
                     .textInputAutocapitalization(.never)
                     .padding()
                 Picker("Year", selection: $year) {
-                    ForEach(2007..<2024) { year in
+                    ForEach(availableYears, id: \.self) { year in
                         Text(String(year))
                             .tag(year)
                     }
                 }
-
                 Button("Find") {
                     searching = true
                 }
