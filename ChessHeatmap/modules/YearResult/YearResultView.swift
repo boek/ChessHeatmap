@@ -10,10 +10,16 @@ import SwiftUI
 struct YearResultView: View {
     @Environment(\.chessClient) var chessClient
     @State var username: String = ""
-    @State var year: Int = 2023
     @State var results: OrderedGames?
     @State var searching = false
     @State var message: String? = nil
+    @State private var availableYears: [Int] = []
+    @State private var year: Int = Calendar.current.component(.year, from: Date())
+
+    private func setupAvailableYears() {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        availableYears = Array(2007...currentYear)
+    }
 
     var body: some View {
         VStack {
@@ -22,12 +28,11 @@ struct YearResultView: View {
                     .textInputAutocapitalization(.never)
                     .padding()
                 Picker("Year", selection: $year) {
-                    ForEach(2007..<2024) { year in
+                    ForEach(availableYears, id: \.self) { year in
                         Text(String(year))
                             .tag(year)
                     }
                 }
-
                 Button("Find") {
                     searching = true
                 }
@@ -42,7 +47,7 @@ struct YearResultView: View {
                     HeatmapView(orderedGames: results)
                 }
             }
-        }
+        }.onAppear(perform: setupAvailableYears)
         .task(id: results) {
             guard let results else { return }
             var (wins, losses, ties) = results.gameList.reduce((0, 0, 0)) { results, game in
