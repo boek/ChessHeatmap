@@ -13,6 +13,7 @@ struct ChessHeatmapApp: App {
         WindowGroup {
             YearResultView()
                 .with(chessClient: .live)
+                .environment(\.font, Font.custom("KaiseiDecol-Regular", size: 15))
         }
     }
 }

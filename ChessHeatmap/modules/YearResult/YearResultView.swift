@@ -23,25 +23,46 @@ struct YearResultView: View {
 
     var body: some View {
         VStack {
+            Text("Year View")
+                .font(.custom("KaiseiDecol-Regular", size: 32))
+                .padding(.top, 34)
+                .padding(.bottom, 20)
+            HStack (spacing: 13) {
+                Text("Profiles")
+                Text("Year View")
+                Text("Compare")
+                Text("Theme")
+                Text("About")
+            }
+            Divider()
             VStack {
-                TextField("username", text: $username)
-                    .textInputAutocapitalization(.never)
-                    .padding()
-                Picker("Year", selection: $year) {
-                    ForEach(availableYears, id: \.self) { year in
-                        Text(String(year))
-                            .tag(year)
+                VStack (alignment: .leading) {
+                    Text("Username")
+                    TextField("username", text: $username)
+                        .padding(10)
+                        .textInputAutocapitalization(.never)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                }
+                HStack {
+                    Picker("Year", selection: $year) {
+                        ForEach(availableYears, id: \.self) { year in
+                            Text(String(year))
+                                .tag(year)
+                        }
                     }
-                }
-                Button("Find") {
-                    searching = true
-                }
-
+                    Button("Search") {
+                        searching = true
+                    }.buttonStyle(.bordered)
+                    
+                }.padding(.vertical, 10)
                 if let message {
                     Text(message)
                 }
             }
-            Divider()
+            .padding()
             ScrollView {
                 if let results {
                     HeatmapView(orderedGames: results)
