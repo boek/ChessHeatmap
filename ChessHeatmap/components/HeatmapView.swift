@@ -33,20 +33,6 @@ struct HeatmapView: View {
                     }
             }
         }
-//        List {
-//            ForEach(orderedGames.keys, id: \.self) { key in
-//                Section(key.description) {
-//                    if let games = orderedGames[key] {
-//                        ForEach(games) { game in
-//                            Text("\(game.white.username) vs \(game.black.username)")
-//                        }
-//                    }
-//                }.background {
-//                    Color.green
-//                        .opacity()
-//                }
-//            }
-//        }
     }
 }
 

@@ -52,13 +52,12 @@ struct YearResultView: View {
             guard let results else { return }
             var (wins, losses, ties) = results.gameList.reduce((0, 0, 0)) { results, game in
                 var (wins, losses, ties) = results
-//                let result = game.white.username == username ? game.white.result : game.black.result
-//                switch result.simplified {
-//                case .win: wins += 1
-//                case .tie: ties += 1
-//                case .loss: losses += 1
-//                }
-
+                let result = game.white.player.username == username ? game.white.result : game.black.result
+                switch result.simplified {
+                case .win: wins += 1
+                case .tie: ties += 1
+                case .loss: losses += 1
+                }
                 return (wins, losses, ties)
             }
 
