@@ -25,69 +25,21 @@ struct NavbarView: View {
                 // Switch to ProfileView
                 selectedTab = .profiles
             } label: {
-                GeometryReader { geo in
-                    VStack {
-                        VStack {
-                            Text("Profiles")
-                                .foregroundColor(.black)
-                                .frame(width: 80, height: 60)
-                        }
-                        Spacer()
-                        
-                        if selectedTab == .profiles {
-                            Rectangle()
-                                .foregroundColor(.blue)
-                                .frame(width: geo.size.width/2, height: 4)
-                                .cornerRadius(2)
-                        }
-                    }.frame(width: geo.size.width, height: geo.size.height)
-                }
+                NavbarButton(buttonText: "Profiles", isActive: selectedTab == .profiles)
             }
             
             Button {
                 // Switch to YearView
                 selectedTab = .yearView
             } label: {
-                GeometryReader { geo in
-                    VStack {
-                        VStack {
-                            Text("Year View")
-                                .foregroundColor(.black)
-                                .frame(width: 80, height: 60)
-                        }
-                        Spacer()
-                        
-                        if selectedTab == .yearView {
-                            Rectangle()
-                                .foregroundColor(.blue)
-                                .frame(width: geo.size.width/2, height: 4)
-                                .cornerRadius(2)
-                        }
-                    }.frame(width: geo.size.width, height: geo.size.height)
-                }
+                NavbarButton(buttonText: "Year View", isActive: selectedTab == .yearView)
             }
             
             Button {
                 // Switch to YearView
                 selectedTab = .compareStats
             } label: {
-                GeometryReader { geo in
-                    VStack {
-                        VStack {
-                            Text("Compare Stats")
-                                .foregroundColor(.black)
-                                .frame(width: 80, height: 60)
-                        }
-                        Spacer()
-                        
-                        if selectedTab == .compareStats {
-                            Rectangle()
-                                .foregroundColor(.blue)
-                                .frame(width: geo.size.width/2, height: 4)
-                                .cornerRadius(2)
-                        }
-                    }.frame(width: geo.size.width, height: geo.size.height)
-                }
+                NavbarButton(buttonText: "Compare Stats", isActive: selectedTab == .compareStats)
             }
         }
         .frame(height: 82)
