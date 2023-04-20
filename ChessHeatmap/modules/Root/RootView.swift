@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selection = 0
+    @State private var selectedTab: Tabs = .Profiles
     
     var body: some View {
-        Text("hello, root!")
+        VStack {
+            Text("Hello, Root View!")
+                .font(.custom("KaiseiDecol-Regular", size: 32))
+            NavbarView()
+        }
     }
     
     
