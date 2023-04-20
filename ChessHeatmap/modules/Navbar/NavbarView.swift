@@ -27,7 +27,6 @@ struct NavbarView: View {
             } label: {
                 GeometryReader { geo in
                     VStack {
-                        Spacer()
                         VStack {
                             Text("Profiles")
                                 .foregroundColor(.black)
@@ -51,7 +50,6 @@ struct NavbarView: View {
             } label: {
                 GeometryReader { geo in
                     VStack {
-                        Spacer()
                         VStack {
                             Text("Year View")
                                 .foregroundColor(.black)
@@ -75,7 +73,6 @@ struct NavbarView: View {
             } label: {
                 GeometryReader { geo in
                     VStack {
-                        Spacer()
                         VStack {
                             Text("Compare Stats")
                                 .foregroundColor(.black)
