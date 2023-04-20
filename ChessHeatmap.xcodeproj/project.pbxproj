@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6735CED29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6735CEC29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf */; };
 		D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */; };
 		D55B362029DF7FBB005AD9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */; };
 		D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B362E29DF80C6005AD9B4 /* ChessClient.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6735CEC29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaiseiDecol-Regular.ttf"; sourceTree = "<group>"; };
 		D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessHeatmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessHeatmapApp.swift; sourceTree = "<group>"; };
 		D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		D55B362B29DF8095005AD9B4 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6735CEC29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf */,
 				D55B362129DF7FBB005AD9B4 /* ChessHeatmap.entitlements */,
 				D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */,
 			);
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55B362029DF7FBB005AD9B4 /* Assets.xcassets in Resources */,
+				B6735CED29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Z88RVG5KD9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -531,7 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = us.boek.ChessHeatmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Z88RVG5KD9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -569,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = us.boek.ChessHeatmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
