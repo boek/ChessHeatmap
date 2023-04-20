@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selectedTab: Tabs = .Profiles
+    // Default the tab to the Profiles view
+    @State private var selectedTab: Tabs = .profiles
     
     var body: some View {
         VStack {
             Text("Hello, Root View!")
                 .font(.custom("KaiseiDecol-Regular", size: 32))
-            NavbarView()
+            NavbarView(selectedTab: $selectedTab)
         }
     }
     
