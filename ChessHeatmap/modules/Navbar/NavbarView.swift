@@ -7,9 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var selection = 0
-    
+// Known number of states for our views
+enum Tabs: Int {
+    case Profiles = 0
+    case YearView = 1
+    case CompareStats = 2
+}
+
+struct NavbarView: View {
     var body: some View {
         HStack {
             
@@ -85,9 +90,9 @@ struct ContentView: View {
     }
     
     
-    struct ContentView_Previews: PreviewProvider {
+    struct NavbarView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            NavbarView()
         }
     }
 }
