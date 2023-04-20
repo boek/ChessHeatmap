@@ -21,7 +21,7 @@ struct NavbarButton: View {
                             .frame(width: 80, height: 60)
                     } else {
                         Text(buttonText)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("text-primary"))
                             .frame(width: 80, height: 60)
                     }
                     
