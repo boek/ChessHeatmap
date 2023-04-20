@@ -9,16 +9,21 @@ import SwiftUI
 
 // Known number of states for our views
 enum Tabs: Int {
-    case Profiles = 0
-    case YearView = 1
-    case CompareStats = 2
+    case profiles = 0
+    case yearView = 1
+    case compareStats = 2
 }
 
 struct NavbarView: View {
+    
+    @Binding var selectedTab: Tabs
+    
     var body: some View {
         HStack {
             
             Button {
+                // Switch to ProfileView
+                selectedTab = .profiles
             } label: {
                 GeometryReader { geo in
                     VStack {
@@ -29,15 +34,20 @@ struct NavbarView: View {
                                 .frame(width: 80, height: 60)
                         }
                         Spacer()
-                        Rectangle()
-                            .foregroundColor(.blue)
-                            .frame(width: geo.size.width/2, height: 4)
-                            .cornerRadius(2)
+                        
+                        if selectedTab == .profiles {
+                            Rectangle()
+                                .foregroundColor(.blue)
+                                .frame(width: geo.size.width/2, height: 4)
+                                .cornerRadius(2)
+                        }
                     }.frame(width: geo.size.width, height: geo.size.height)
                 }
             }
             
             Button {
+                // Switch to YearView
+                selectedTab = .yearView
             } label: {
                 GeometryReader { geo in
                     VStack {
@@ -48,15 +58,20 @@ struct NavbarView: View {
                                 .frame(width: 80, height: 60)
                         }
                         Spacer()
-                        Rectangle()
-                            .foregroundColor(.blue)
-                            .frame(width: geo.size.width/2, height: 4)
-                            .cornerRadius(2)
+                        
+                        if selectedTab == .yearView {
+                            Rectangle()
+                                .foregroundColor(.blue)
+                                .frame(width: geo.size.width/2, height: 4)
+                                .cornerRadius(2)
+                        }
                     }.frame(width: geo.size.width, height: geo.size.height)
                 }
             }
             
             Button {
+                // Switch to YearView
+                selectedTab = .compareStats
             } label: {
                 GeometryReader { geo in
                     VStack {
@@ -67,10 +82,13 @@ struct NavbarView: View {
                                 .frame(width: 80, height: 60)
                         }
                         Spacer()
-                        Rectangle()
-                            .foregroundColor(.blue)
-                            .frame(width: geo.size.width/2, height: 4)
-                            .cornerRadius(2)
+                        
+                        if selectedTab == .compareStats {
+                            Rectangle()
+                                .foregroundColor(.blue)
+                                .frame(width: geo.size.width/2, height: 4)
+                                .cornerRadius(2)
+                        }
                     }.frame(width: geo.size.width, height: geo.size.height)
                 }
             }
@@ -92,7 +110,7 @@ struct NavbarView: View {
     
     struct NavbarView_Previews: PreviewProvider {
         static var previews: some View {
-            NavbarView()
+            NavbarView(selectedTab: .constant(.profiles))
         }
     }
 }
