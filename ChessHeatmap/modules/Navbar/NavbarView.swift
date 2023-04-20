@@ -20,7 +20,6 @@ struct NavbarView: View {
     
     var body: some View {
         HStack {
-            
             Button {
                 // Switch to ProfileView
                 selectedTab = .profiles

@@ -13,9 +13,27 @@ struct RootView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, Root View!")
-                .font(.custom("KaiseiDecol-Regular", size: 32))
+            // Header
+            if(selectedTab == .profiles) {
+                Header(headerText: "Profiles")
+            } else if (selectedTab == .yearView) {
+                Header(headerText: "Year View")
+            } else if (selectedTab == .compareStats) {
+                Header(headerText: "Compare Stats")
+            } else {
+                Header(headerText: "Hello, root view!")
+            }
+            
+            // Navbar
             NavbarView(selectedTab: $selectedTab)
+            
+            // View
+            if (selectedTab == .yearView) {
+                YearResultView()
+                    .with(chessClient: .live)
+                    .environment(\.font, Font.custom("KaiseiDecol-Regular", size: 15))
+            }
+            Spacer()
         }
     }
     

@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct ChessHeatmapApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
-            YearResultView()
-                .with(chessClient: .live)
-                .environment(\.font, Font.custom("KaiseiDecol-Regular", size: 15))
+            RootView()
         }
     }
 }
