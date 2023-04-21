@@ -10,23 +10,19 @@ For the most up to date data, we'd have to query the chess.com API for this view
 
 Lazy load the profiles with scroll. Also, they should be allowed to hold and drag these into different orders, so we'd have a sequence column on the DB.
 
-We'd probably have to make a table in the DB to store which profiles we'd like on this view.
-
-When you add a profile, we will add all the historical data for that username. We also have to think of when a new year arrives, you have to add in the previous year's data which used to be the current year.
-
 **Streaks**
-
-For the current streak, we need to query for the current year's data, then use that with a combination of the historical data to find out the current streak.
-
-For the longest streak, we'll also have to use the current year's data and the historical data.
 
 (This can come later on)
 
+For the current/longest streak, we need to query for the current year's data, then use that with a combination of the historical data.
+
+Perhaps we'll store historical data for profiles to make this quicker.
+
 ## Year View
 
-If it's the current year, make a call to the chess.com API in order to fetch the data. This is so we get the most up to date data.
+We should validate that the username field is not empty.
 
-We should also validate that the username field is not empty.
+If it's the current year, make a call to the chess.com API in order to fetch the data. This is so we get the most up to date data.
 
 If it's a past year, we should check our DB if we already have the games for the given username for that year. If the result set is greater than 0, then we'd give the user that heatmap data instead of sending a request to chess.com:
 
@@ -54,14 +50,14 @@ for row in rows {
 
 If it's a past year, and the result set from the DB is of size 0, we don't have data for that given username. We will then query the chess.com API and then store the results in the DB and display the heatmap data.
 
-After, we could probably display a list of stored users and years as a list. We can also allow the user to delete the stored data. It will get re-added if they query again.
-
 ## Compare Stats
 
 We'll use the maximum number between both players as a basis for the shading of the squares across both heatmap views. Then, we just display both normally. Each square should be able to be tapped with a popup of the stats for that day.
 
 We'll use the same logic for storing data as the "Year View."
 
-## Theme
+## Settings
 
 This will set a global variable for the color of the squares in the "Profiles", "Year View", and "Compare Stats" views.
+
+We will allow the user to delete previous records to clear storage in settings.
