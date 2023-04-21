@@ -1,10 +1,26 @@
 # Design Notes and Ideas
 
+## Widgets
+
+Different sizes
+
 ## Profiles
 
 For the most up to date data, we'd have to query the chess.com API for this view.
 
+Lazy load the profiles with scroll. Also, they should be allowed to hold and drag these into different orders, so we'd have a sequence column on the DB.
+
 We'd probably have to make a table in the DB to store which profiles we'd like on this view.
+
+When you add a profile, we will add all the historical data for that username. We also have to think of when a new year arrives, you have to add in the previous year's data which used to be the current year.
+
+**Streaks**
+
+For the current streak, we need to query for the current year's data, then use that with a combination of the historical data to find out the current streak.
+
+For the longest streak, we'll also have to use the current year's data and the historical data.
+
+(This can come later on)
 
 ## Year View
 
