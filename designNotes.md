@@ -14,12 +14,26 @@ We should also validate that the username field is not empty.
 
 If it's a past year, we should check our DB if we already have the games for the given username for that year. If the result set is greater than 0, then we'd give the user that heatmap data instead of sending a request to chess.com:
 
-```sql
-SELECT *
-FROM players p
-JOIN game_player gp ON gp.player_id = p.id
-JOIN games g ON g.uuid = gp.game_id
-WHERE p.username = ? AND strftime('%Y', g.end_time) = ?
+```swift
+import SQLite
+
+let db = try Connection("path/to/database.sqlite")
+
+let username = "johndoe"
+let year = "2023"
+
+let query = """
+    SELECT *
+    FROM players p
+    JOIN game_player gp ON gp.player_id = p.id
+    JOIN games g ON g.uuid = gp.game_id
+    WHERE p.username = ? AND strftime('%Y', g.end_time) = ?
+"""
+
+let rows = try db.prepare(query, username, year)
+for row in rows {
+    // Process the results
+}
 ```
 
 If it's a past year, and the result set from the DB is of size 0, we don't have data for that given username. We will then query the chess.com API and then store the results in the DB and display the heatmap data.
