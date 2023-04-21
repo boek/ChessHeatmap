@@ -15,7 +15,7 @@ We should also validate that the username field is not empty.
 If it's a past year, we should check our DB if we already have the games for the given username for that year. If the result set is greater than 0, then we'd give the user that heatmap data instead of sending a request to chess.com:
 
 ```sql
-SELECT COUNT(*) > 0
+SELECT *
 FROM players p
 JOIN game_player gp ON gp.player_id = p.id
 JOIN games g ON g.uuid = gp.game_id
