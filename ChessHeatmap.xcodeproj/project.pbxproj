@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B6735CED29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6735CEC29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf */; };
+		B6E07BC729F3658B00B2F89F /* CompareStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E07BC629F3658B00B2F89F /* CompareStatsView.swift */; };
 		D55B361C29DF7FBA005AD9B4 /* ChessHeatmapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */; };
 		D55B362029DF7FBB005AD9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */; };
 		D55B362F29DF80C6005AD9B4 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B362E29DF80C6005AD9B4 /* ChessClient.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		B6735CEC29F1AAA900F4C050 /* KaiseiDecol-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaiseiDecol-Regular.ttf"; sourceTree = "<group>"; };
+		B6E07BC629F3658B00B2F89F /* CompareStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareStatsView.swift; sourceTree = "<group>"; };
 		D55B361829DF7FBA005AD9B4 /* ChessHeatmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessHeatmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55B361B29DF7FBA005AD9B4 /* ChessHeatmapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessHeatmapApp.swift; sourceTree = "<group>"; };
 		D55B361F29DF7FBB005AD9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6E07BC529F3657800B2F89F /* CompareStats */ = {
+			isa = PBXGroup;
+			children = (
+				B6E07BC629F3658B00B2F89F /* CompareStatsView.swift */,
+			);
+			path = CompareStats;
+			sourceTree = "<group>";
+		};
 		D55B360F29DF7FBA005AD9B4 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		D55B362A29DF8090005AD9B4 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				B6E07BC529F3657800B2F89F /* CompareStats */,
 				D573571B29DFC59C005225D6 /* UserList */,
 				D573570D29DF8C30005225D6 /* YearResult */,
 			);
@@ -368,6 +379,7 @@
 				D573571129DF9712005225D6 /* HeatmapView.swift in Sources */,
 				D573571329DF9767005225D6 /* OrderedGames.swift in Sources */,
 				D573571729DF9877005225D6 /* GameResult.swift in Sources */,
+				B6E07BC729F3658B00B2F89F /* CompareStatsView.swift in Sources */,
 				D573572D29DFCD8E005225D6 /* Schema.swift in Sources */,
 				D573573529DFD2E2005225D6 /* Database.swift in Sources */,
 				D573571F29DFC5BD005225D6 /* User.swift in Sources */,
